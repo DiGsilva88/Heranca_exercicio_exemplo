@@ -10,13 +10,23 @@
             Funcionario f1=new Funcionario ("Luís",45,"Porto");
             Funcionario f2 = new Funcionario("Sara", 42, "Braga");
 
+
+            //polimorfismo de referencia
             //criar o scoio chamando os construtores
-            Socio socio1 = new Socio("Manuel", 35, "Vila Verde", 100);
+            Funcionario socio1 = new Socio("Manuel", 35, "Vila Verde", 100);
+
+
+            //do lado esquerdo o compilador ve o socio como um funcionario
+            //new socio=> o objecto real é do tipo Socio
+            //ou seja é um funcionario especializado
+
             Socio socio2 = new Socio("Pedro", 38, "Braga", 200);
 
             f1.ExibirInformacoes();
             socio1.ExibirInformacoes();
+            socio2.MostrarqtAccoes();
             socio2.ExibirInformacoes();
+
 
             //o scoio também é um funcionario só que é especializado
 
@@ -25,7 +35,7 @@
 
             //polimorfismo vem do grego multiplas formas
 
-
+            //se quero acrescentar algum comportamento a mais vou escrever por exemplo (nAccoes=x)
 
         }
     }

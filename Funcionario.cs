@@ -14,7 +14,7 @@ namespace Heranca_exercicio_exemplo
 
         //construtor com parametros
 
-        public Funcionario (string nome, int idade, string morada)
+        public Funcionario(string nome, int idade, string morada)
         {
             Nome = nome;
             idade = idade;
@@ -24,12 +24,19 @@ namespace Heranca_exercicio_exemplo
 
         //metodo
 
-        public void ExibirInformacoes()
+        public virtual void ExibirInformacoes()
 
         {
             Console.WriteLine($"Funcionario: {Nome}, idade {Idade}, Morada {Morada}");
         }
 
+        //adaptar o metodo classe base para que possa ser subscrito,adicionar virtual ao metodo para que este possa ser redefinido
+        //pelas classes derivadas=         public virtual void ExibirInformacoes()
+
+
+        //redefinmos o metodo
+
+        
 
 
 
