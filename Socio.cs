@@ -39,5 +39,13 @@ namespace Heranca_exercicio_exemplo
             base.ExibirInformacoes();//base ---> é a herança da classe Funcionario
             Console.WriteLine($"Número de acções: {NumeroAccoes}");
         }
-}
+
+        public override string ToString()
+        {
+            //return base.ToString();//ele vai me mostrar a classe e o namespace onde esta o objecto
+
+            return $"Socio: {Nome}, idade {Idade}, Numero de accoes {NumeroAccoes}"; //com o to string quero que diga é socio e não funcionario
+            //resultado: Socio: Pedro, idade 0, Numero de accoes 100
+        }
+    }
 }

@@ -21,5 +21,16 @@ namespace Heranca_exercicio_exemplo
             base.ExibirInformacoes();
             Console.WriteLine($"trabalhou {NumeroHoras}");
         }
+
+
+        //alternativa com ToString
+
+        public override string ToString()
+        {
+            return base.ToString()+ $" Valor a Hora: {NumeroHoras}€";
+        }
+    }
+
 }
-}
+    
+

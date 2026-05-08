@@ -43,8 +43,14 @@ namespace Heranca_exercicio_exemplo
             Console.WriteLine("Este funcionario não tem accoes");
         }
 
+        public override string ToString()
+        {
+            //return base.ToString();//ele vai me mostrar a classe e o namespace onde esta o objecto
+
+            return $"Funcionario: {Nome}, idade {Idade}, Morada {Morada}";
 
 
 
+        }
     }
 }

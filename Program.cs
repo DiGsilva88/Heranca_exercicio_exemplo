@@ -1,4 +1,7 @@
-﻿namespace Heranca_exercicio_exemplo
+﻿using System.Drawing;
+using System.Threading.Channels;
+
+namespace Heranca_exercicio_exemplo
 {
     internal class Program
     {
@@ -8,8 +11,8 @@
             List<Funcionario> listaFuncionario = new List<Funcionario>();
 
             Funcionario f1 = new Funcionario("Luis", 45, "Barcelos");
-            Funcionario socio = new Socio("Pedro", 34, "Braga",100);
-            Funcionario tarefeiro = new Outsourcing("maria", 28, "Viana",15);
+            Funcionario socio = new Socio("Pedro", 34, "Braga", 100);
+            Funcionario tarefeiro = new Outsourcing("maria", 28, "Viana", 15);
 
             //adiconar lista
             listaFuncionario.Add(f1);
@@ -17,13 +20,13 @@
 
             listaFuncionario.Add(tarefeiro);
 
-            foreach (Funcionario f in listaFuncionario) 
+            foreach (Funcionario f in listaFuncionario)
 
             {
                 f.ExibirInformacoes();
 
 
-                
+
             }
 
             Socio s = new Socio("asd", 34, "brg", 500);
@@ -37,8 +40,35 @@
 
 
             }
+            //metodo tostring()
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine(socio); //se quiser passar um objecto=socio,gostaria que passase o texto mas não vai acontecer isso
+                                      //este objecto pertence a classe socio
+            socio.ToString();
 
+
+            Console.WriteLine("*************Lista funcionarios com Tostring*************");
+            {
+                foreach (Funcionario f in listaFuncionario)
+                {
+                    Console.WriteLine(f.ToString());
+
+                    //No teu ciclo foreach, o f.ToString() sozinho não faz nada(ele apenas "gera" a string).
+                    //Para veres o resultado, tens de o colocar dentro de um Console.WriteLine
+
+
+                    //O que está a acontecer no teu código:Polimorfismo: Ao usares foreach (Funcionario f in listaFuncionario), o C# é inteligente: se o objeto for um Socio, ele executa o método do Socio. 
+                    //    Se for Outsourcing, executa o dele.ToString: Por defeito, todos os objetos em C# herdam um ToString() que apenas diz o nome da classe. 
+                    //    Ao fazeres override, estás a dizer: "Esquece o padrão, usa este formato de texto".
+
+
+
+                }
+
+            }
         }
+
 
 
 
@@ -111,4 +141,4 @@
         //    //com a herança só acresce e pode ser reutilizavel,só cresce as classes ,herdam os metodos
         //}
     }
-    }
+}
