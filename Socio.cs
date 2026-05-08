@@ -23,9 +23,12 @@ namespace Heranca_exercicio_exemplo
 
         //metodo
 
+        /*public override void MostrarqtAccoes() *///este metodo não precisa do override ,basta ser o metodo da classe
+        //se não preciso de ir a base buscar informações uso virtual
         public void MostrarqtAccoes()
 
         {
+            //base.MostrarQtAccoes();
             Console.WriteLine($" o numero de accoes é {NumeroAccoes}");
         }
 
@@ -33,7 +36,8 @@ namespace Heranca_exercicio_exemplo
         public override void ExibirInformacoes()
         {
 
-
+            base.ExibirInformacoes();//base ---> é a herança da classe Funcionario
+            Console.WriteLine($"Número de acções: {NumeroAccoes}");
         }
 }
 }

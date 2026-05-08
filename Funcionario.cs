@@ -32,11 +32,17 @@ namespace Heranca_exercicio_exemplo
 
         //adaptar o metodo classe base para que possa ser subscrito,adicionar virtual ao metodo para que este possa ser redefinido
         //pelas classes derivadas=         public virtual void ExibirInformacoes()
-
-
         //redefinmos o metodo
 
-        
+
+        //------> criar novo funcionario em regime de outsorcing----> propriedade(valor hora)
+
+
+        public  void MostrarQtAccoes()
+        {
+            Console.WriteLine("Este funcionario não tem accoes");
+        }
+
 
 
 

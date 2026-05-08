@@ -7,7 +7,7 @@
 
             //implementar a classe base-funcionario-check
 
-            Funcionario f1=new Funcionario ("Luís",45,"Porto");
+            Funcionario f1 = new Funcionario("Luís", 45, "Porto");
             Funcionario f2 = new Funcionario("Sara", 42, "Braga");
 
 
@@ -37,6 +37,15 @@
 
             //se quero acrescentar algum comportamento a mais vou escrever por exemplo (nAccoes=x)
 
+
+            //criar o  funcionario tarefeiro de Outsourcing
+
+            Funcionario tarefeiro = new Outsourcing("Maria", 27, "Braga", 20);
+            Console.WriteLine("Exibi a informação do tarefeiro");
+            tarefeiro.ExibirInformacoes();
+
+
+            //com a herança só acresce e pode ser reutilizavel,só cresce as classes ,herdam os metodos
         }
     }
 }
